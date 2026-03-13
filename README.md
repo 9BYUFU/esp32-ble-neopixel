@@ -19,11 +19,11 @@ button, input {
 <body>
 
 <h1>Commande LED Neopixel (BLE)</h1>
-
-<button onclick="connect()">🔗 Connexion BLE</button><br>
 <a href="page2.html">
 <button>Page 2</button>
 </a>
+<button onclick="connect()">🔗 Connexion BLE</button><br>
+
 
 <label>Couleur :</label><br>
 <input type="color" id="colorPicker" value="#ff0000" onchange="sendColor()"><br>
