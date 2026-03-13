@@ -4,6 +4,9 @@
 <head>
 <meta charset="utf-8">
 <title>ESP32 BLE Joystick</title>
+    <button onclick="connect()">🔗 Connexion BLE</button>
+
+<div id="zone"></div>
 
 <!-- NippleJS via CDN -->
 <script src="https://cdn.jsdelivr.net/npm/nipplejs@0.9.1/dist/nipplejs.min.js"></script>
@@ -111,10 +114,29 @@ joystick.on('end', () => {
     if (!brightChar) return;
     brightChar.writeValue(new Uint8Array([0]));
 });
+    joystick.on('end', () => {
+    if (!brightChar) return;
+    brightChar.writeValue(new Uint8Array([0]));
+        let ledState = false;
+
+function toggleLED() {
+
+    if (!brightChar) return;
+
+    ledState = !ledState;
+
+    if (ledState) {
+        brightChar.writeValue(new Uint8Array([100])); // ON
+    } else {
+        brightChar.writeValue(new Uint8Array([0])); // OFF
+    }
+}
+});
 </script>
 
 </body>
 </html>
+
 
 
 
