@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -54,7 +55,7 @@ let device, server, colorChar, brightChar;
 async function connect() {
     device = await navigator.bluetooth.requestDevice({
         acceptAllDevices: true,
-        optionalServices: [SERVICE_UUID] 
+        optionalServices: [SERVICE_UUID]
     });
 
     server = await device.gatt.connect();
@@ -114,4 +115,5 @@ joystick.on('end', () => {
 
 </body>
 </html>
+
 
