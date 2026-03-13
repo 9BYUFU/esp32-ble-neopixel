@@ -21,7 +21,7 @@ button, input {
 <h1>Commande LED Neopixel (BLE)</h1>
 
     
-<a href="page2.html">
+<a href="Untitled-1.html">
 <button onclick="connect()">🔗 Connexion BLE</button><br> </a>
 </a>
 
