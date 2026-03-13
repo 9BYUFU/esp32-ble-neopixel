@@ -72,6 +72,11 @@ function sendBrightness() {
     const value = document.getElementById("brightness").value;
     brightChar.writeValue(new Uint8Array([value]));
 }
+    <script>
+function go(){
+    window.location.href = "Untitled-1.html";
+}
+</script>
 </script>
 
 </body>
